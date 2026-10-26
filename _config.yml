@@ -1,5 +1,14 @@
 title: Mykhailo Markhain
-description: Notes, ideas, and things I'm learning.
+description: Practical notes on AWS Lambda, serverless architecture, Cloudflare and Claude Code, with open-source TypeScript examples.
+title_separator: "|"
+og_image: /assets/images/og-default.png
+copyright: Mykhailo Markhain
+social:
+  type: Person
+  name: Mykhailo Markhain
+  links:
+    - https://www.linkedin.com/in/mykhailo-markhain-06635093/
+    - https://github.com/zomer701
 url: https://zomer701.github.io
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: default
@@ -13,6 +22,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
 
 author:
   name: Mykhailo Markhain

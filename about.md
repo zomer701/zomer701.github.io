@@ -1,6 +1,7 @@
 ---
 layout: single
 title: About
+excerpt: "About Mykhailo Markhain: CV, LinkedIn and GitHub links."
 permalink: /about/
 ---
 

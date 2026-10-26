@@ -290,3 +290,28 @@ th {
     float: none;
   }
 }
+
+/* No sidebar: windows use the full content width. */
+.archive,
+.page {
+  float: none !important;
+  width: auto !important;
+  max-width: 1100px;
+  margin: 0 auto 2em !important;
+  padding: 1em !important;
+}
+
+/* Tight lines so ASCII diagrams join up. */
+pre code,
+.highlight pre {
+  line-height: 1.25 !important;
+}
+
+/* Home intro */
+.archive > .page__title {
+  margin-top: 0.25em;
+}
+
+.home-tagline {
+  margin-top: 0;
+}
