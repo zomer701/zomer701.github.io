@@ -213,4 +213,4 @@ Also, tokens can expire or be revoked early. When that happens you'll see `AUTH_
 - **Human approval.** Use a durable callback to pause until you approve, before anything is allowed to write code.
 
 The code is MIT-licensed and small enough to read in one sitting:
-**[github.com/zomer701/claude-durable-lambda](https://github.com/zomer701/claude-durable-lambda)**. If you try it, tell me what it found in your code. You can reach me on [LinkedIn](https://www.linkedin.com/in/mykhailo-markhain-06635093/).
+**[github.com/zomer701/claude-durable-lambda](https://github.com/zomer701/claude-durable-lambda)**.
