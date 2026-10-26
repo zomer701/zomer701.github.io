@@ -5,3 +5,5 @@ theme: minima
 plugins:
   - jekyll-feed
 permalink: /:year/:month/:day/:title/
+github_username: zomer701
+linkedin_username: mykhailo-markhain-06635093
