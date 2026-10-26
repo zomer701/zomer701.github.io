@@ -1,0 +1,265 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* ==========================================================================
+   1995 mode: teal desktop, grey Windows-style windows, pixel headings
+   ========================================================================== */
+
+$w95-desktop: #008080;
+$w95-face: #c0c0c0;
+$w95-light: #ffffff;
+$w95-shadow: #808080;
+$w95-dark: #000000;
+$w95-title: #000080;
+$w95-title-end: #1084d0;
+$pixel: "VT323", "Courier New", monospace;
+$system: Tahoma, Verdana, "MS Sans Serif", Geneva, sans-serif;
+
+@mixin raised {
+  background: $w95-face;
+  border: 2px solid;
+  border-color: $w95-light $w95-shadow $w95-shadow $w95-light;
+  box-shadow: 1px 1px 0 $w95-dark;
+}
+
+@mixin sunken {
+  background: $w95-light;
+  border: 2px solid;
+  border-color: $w95-shadow $w95-light $w95-light $w95-shadow;
+}
+
+@mixin title-bar($label) {
+  content: $label;
+  display: block;
+  margin: -1em -1em 1em;
+  padding: 3px 8px;
+  background: linear-gradient(90deg, $w95-title, $w95-title-end);
+  color: $w95-light;
+  font-family: $system;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+html {
+  background: $w95-desktop;
+}
+
+body {
+  background: $w95-desktop;
+  color: $w95-dark;
+  font-family: $system;
+}
+
+.masthead {
+  display: none;
+}
+
+#main {
+  margin-top: 2em;
+}
+
+a {
+  color: #0000ee;
+  text-decoration: underline;
+
+  &:visited {
+    color: #551a8b;
+  }
+
+  &:hover {
+    color: #ee0000;
+  }
+}
+
+h1, h2, h3,
+.page__title,
+.archive__item-title,
+.archive__subtitle {
+  font-family: $pixel;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.page__title { font-size: 2.6em; }
+.archive__item-title { font-size: 1.7em; }
+h2 { font-size: 1.9em; }
+h3 { font-size: 1.5em; }
+
+/* Windows ---------------------------------------------------------------- */
+
+.archive,
+.page,
+.sidebar .author__avatar + .author__content,
+.sidebar {
+  @include raised;
+  padding: 1em;
+}
+
+.archive::before { @include title-bar("C:\\BLOG\\POSTS.TXT"); }
+.page::before { @include title-bar("C:\\BLOG\\READ.EXE"); }
+
+.sidebar {
+  opacity: 1;
+  margin-bottom: 1.5em;
+
+  &::before { @include title-bar("CONTACT.EXE"); }
+
+  .author__avatar + .author__content {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .author__urls-wrapper {
+    margin-top: 0.5em;
+  }
+
+  .author__urls {
+    @include sunken;
+    padding: 0.5em;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.page__inner-wrap {
+  @include sunken;
+  padding: 1em 1.25em;
+}
+
+.archive__subtitle {
+  border-bottom: 2px solid $w95-shadow;
+  color: $w95-dark;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.list__item .archive__item {
+  @include sunken;
+  margin-bottom: 1em;
+  padding: 0.75em 1em;
+}
+
+.page__meta,
+.page__date,
+.archive__item-excerpt {
+  color: #303030;
+}
+
+/* Buttons, code, and tables ---------------------------------------------- */
+
+.btn,
+.page__share .btn {
+  @include raised;
+  border-radius: 0;
+  color: $w95-dark !important;
+  text-decoration: none;
+
+  &:hover {
+    background: #d4d4d4;
+  }
+
+  &:active {
+    border-color: $w95-shadow $w95-light $w95-light $w95-shadow;
+  }
+}
+
+div.highlighter-rouge,
+figure.highlight,
+pre,
+pre.highlight {
+  background: #000 !important;
+  border-radius: 0;
+  border: 2px solid;
+  border-color: $w95-shadow $w95-light $w95-light $w95-shadow;
+}
+
+pre code,
+.highlight pre,
+.highlight code,
+.highlight span {
+  background: transparent !important;
+  color: #33ff33 !important;
+  font-family: $pixel !important;
+  font-size: 1.15em;
+}
+
+p > code,
+li > code,
+td > code {
+  background: $w95-face;
+  border: 1px solid $w95-shadow;
+  border-radius: 0;
+  color: $w95-dark;
+}
+
+table {
+  border: 2px solid $w95-shadow;
+}
+
+th {
+  background: $w95-face;
+}
+
+.toc {
+  @include raised;
+  border-radius: 0;
+
+  .nav__title {
+    background: linear-gradient(90deg, $w95-title, $w95-title-end);
+    font-family: $system;
+  }
+}
+
+/* Footer as a taskbar ------------------------------------------------------ */
+
+.page__footer {
+  background: $w95-face;
+  border-top: 2px solid $w95-light;
+  box-shadow: 0 -1px 0 $w95-shadow;
+  color: $w95-dark;
+  margin-top: 3em;
+
+  footer {
+    padding-top: 0.75em;
+  }
+
+  a,
+  .page__footer-follow .social-icons a {
+    color: $w95-dark;
+  }
+
+  .page__footer-follow::before {
+    content: "Start";
+    @include raised;
+    display: inline-block;
+    margin-right: 0.75em;
+    padding: 2px 10px;
+    font-weight: 700;
+  }
+
+  .page__footer-follow .social-icons {
+    display: inline;
+  }
+
+  .page__footer-copyright {
+    font-family: $pixel;
+    font-size: 1.2em;
+  }
+}
+
+.page__footer-follow ul {
+  display: inline;
+}

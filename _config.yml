@@ -26,6 +26,9 @@ author:
 
 footer:
   links:
+    - label: About
+      icon: fas fa-fw fa-user
+      url: /about/
     - label: CV
       icon: fas fa-fw fa-file-alt
       url: https://mykhailo-markhain-cv.zambezi701.chatgpt.site/
