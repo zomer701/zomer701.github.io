@@ -355,16 +355,17 @@ pre code,
 }
 
 .w95-home {
+  width: 100%;
   text-align: left;
 }
 
-.toc .nav__items a,
-.toc .nav__items a:visited {
+.toc .toc__menu a,
+.toc .toc__menu a:visited {
   color: $w95-dark;
 }
 
-.toc .nav__items a:hover,
-.toc .nav__items a.active {
+.toc .toc__menu a:hover,
+.toc .toc__menu a.active {
   background: $w95-title;
   color: $w95-light;
 }
