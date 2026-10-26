@@ -17,6 +17,9 @@ plugins:
 author:
   name: Mykhailo Markhain
   links:
+    - label: CV
+      icon: fas fa-fw fa-file-alt
+      url: https://mykhailo-markhain-cv.zambezi701.chatgpt.site/
     - label: LinkedIn
       icon: fab fa-fw fa-linkedin
       url: https://www.linkedin.com/in/mykhailo-markhain-06635093/
@@ -26,6 +29,9 @@ author:
 
 footer:
   links:
+    - label: CV
+      icon: fas fa-fw fa-file-alt
+      url: https://mykhailo-markhain-cv.zambezi701.chatgpt.site/
     - label: LinkedIn
       icon: fab fa-fw fa-linkedin
       url: https://www.linkedin.com/in/mykhailo-markhain-06635093/
