@@ -315,3 +315,41 @@ pre code,
 .home-tagline {
   margin-top: 0;
 }
+
+/* Home button, top left on every page except the home page */
+.w95-home {
+  max-width: 1100px;
+  margin: 1.25em auto -0.75em;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.w95-home__btn {
+  @include raised;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  min-height: 44px;
+  padding: 0 1.1em;
+  color: $w95-dark !important;
+  font-family: $system;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    background: #d4d4d4;
+  }
+
+  &:active {
+    border-color: $w95-shadow $w95-light $w95-light $w95-shadow;
+  }
+
+  &:focus-visible {
+    outline: 2px dotted $w95-dark;
+    outline-offset: -6px;
+  }
+}
+
+.layout--home .w95-home {
+  display: none;
+}
