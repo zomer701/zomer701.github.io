@@ -353,3 +353,18 @@ pre code,
 .layout--home .w95-home {
   display: none;
 }
+
+.w95-home {
+  text-align: left;
+}
+
+.toc .nav__items a,
+.toc .nav__items a:visited {
+  color: $w95-dark;
+}
+
+.toc .nav__items a:hover,
+.toc .nav__items a.active {
+  background: $w95-title;
+  color: $w95-light;
+}
