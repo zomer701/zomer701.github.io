@@ -263,3 +263,30 @@ th {
 .page__footer-follow ul {
   display: inline;
 }
+
+/* Layout fixes: keep borders and padding inside each window, and let windows
+   wrap their floated content. */
+.archive,
+.page,
+.sidebar,
+.page__inner-wrap,
+.list__item .archive__item {
+  box-sizing: border-box;
+}
+
+.archive,
+.page {
+  display: flow-root;
+}
+
+.archive__item-title {
+  margin-top: 0;
+}
+
+@media (max-width: 1023px) {
+  .archive,
+  .page {
+    width: 100%;
+    float: none;
+  }
+}
