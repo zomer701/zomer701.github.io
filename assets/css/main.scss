@@ -6,9 +6,8 @@ search: false
 @charset "utf-8";
 
 /* ==========================================================================
-   A fresh take on the 90s: clean white cards on a soft canvas, a teal accent,
-   pixel titles as the only retro flourish, and dark code blocks with a
-   Copy button.
+   Clean and modern: white cards on a soft canvas, a teal accent, Space
+   Grotesk headings, Inter body text, and dark code blocks with a Copy button.
    ========================================================================== */
 
 $accent: #0f766e;
@@ -22,13 +21,13 @@ $line: #e5e7eb;
 $code-canvas: #0b1120;
 $code-bar: #111a2e;
 $code-line: #1e293b;
-$pixel: "VT323", "Courier New", monospace;
+$display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
 /* Theme variables (must be set before the imports) */
 $global-font-family: $sans;
-$header-font-family: $sans;
+$header-font-family: $display;
 $monospace: $mono;
 $background-color: $canvas;
 $text-color: $ink;
@@ -113,28 +112,28 @@ a {
   }
 }
 
-/* Headings: pixel font for the big titles, clean sans for everything else. */
+/* Headings: Space Grotesk, tight and bold. */
 .page__title,
 .archive__item-title {
-  font-family: $pixel;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.05;
+  font-family: $display;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   color: $ink;
 }
 
 .page__title {
-  font-size: 2.4em;
-  margin-bottom: 0.3em;
+  font-size: 1.9em;
+  margin-bottom: 0.4em;
 
   @media (min-width: 768px) {
-    font-size: 3em;
+    font-size: 2.4em;
   }
 }
 
 .archive__item-title {
-  font-size: 2em;
-  margin: 0 0 0.2em;
+  font-size: 1.4em;
+  margin: 0 0 0.3em;
 
   a {
     color: $ink;
@@ -149,7 +148,8 @@ a {
 
 h2,
 h3 {
-  letter-spacing: -0.01em;
+  font-family: $display;
+  letter-spacing: -0.015em;
 }
 
 .page__content h2 {
@@ -489,7 +489,6 @@ tr:last-child td {
 
   .page__footer-copyright {
     margin-top: 0.75em;
-    font-family: $pixel;
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
 }
