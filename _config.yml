@@ -17,6 +17,9 @@ permalink: /:year/:month/:day/:title/
 paginate: 5
 paginate_path: /page:num/
 
+after_footer_scripts:
+  - /assets/js/copy-code.js
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
