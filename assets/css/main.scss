@@ -333,6 +333,25 @@ h3 {
   }
 }
 
+/* Figures ------------------------------------------------------------------ */
+
+.page__content figure:not(.highlight) {
+  margin: 1.5em 0;
+
+  img {
+    border-radius: 12px;
+    border: 1px solid $code-line;
+  }
+
+  figcaption {
+    font-family: $sans;
+    font-size: 0.85em;
+    font-style: normal;
+    line-height: 1.5;
+    margin-top: 0.6em;
+  }
+}
+
 /* Code --------------------------------------------------------------------- */
 
 div.highlighter-rouge,
